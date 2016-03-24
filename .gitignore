@@ -2,7 +2,6 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
 # C extensions
 *.so
 
@@ -44,6 +43,7 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
+results
 
 # Translations
 *.mo
@@ -60,3 +60,6 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+#Idea
+.idea
