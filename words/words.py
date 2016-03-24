@@ -1,7 +1,4 @@
-__author__ = 'enriquesanchez'
-
 import re
-
 import nltk
 
 regex_url = re.compile(
@@ -46,9 +43,10 @@ stopwords = nltk.corpus.stopwords.words('english') + [
     'anothers'
 ]
 
-ignorewords = {'the', 'of', 'to', 'and', 'a', 'in', 'is', 'it', 'for', 'by', 'are', 'i', 'you', 'he', 'she', 'we', 'do',
-               'does', 'did', 'say', 'said', 'says', 'tell', 'told', 'what', 'where', 'when', 'how', 'who', 'whose',
-               'why', 'would'}
+ignorewords = {'the', 'of', 'to', 'and', 'a', 'in', 'is', 'it', 'for', 'by',
+               'are', 'i', 'you', 'he', 'she', 'we', 'do', 'does', 'did',
+               'say', 'said', 'says', 'tell', 'told', 'what', 'where',
+               'when', 'how', 'who', 'whose', 'why', 'would'}
 
 
 def is_url(word):
