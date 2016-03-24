@@ -94,3 +94,17 @@ class TestScraper(TestCase):
         for obj in objects:
             obj['_id'] = self.scraper.db.articles.insert(obj)
         self.assertTrue(self.scraper._element_exists(article))
+
+    def test_get_articles_from_db(self):
+        article = dict(
+            body=u'Police officers outside the Brussels courthouse where Salah Abdeslam, a suspect in the Paris attacks, appeared on Thursday. The hearing was postponed until April 7.',
+            title=u'Salah Abdeslam, Suspect in Paris Attacks, Seeks Extradition to France')
+        objects = [article]
+        for obj in objects:
+            obj['_id'] = self.scraper.db.articles.insert(obj)
+        articles = self.scraper.get_articles_from_db()
+        self.assertEqual(articles,[article])
+
+    def test_get_empty_list_of_articles_from_db(self):
+        articles = self.scraper.get_articles_from_db()
+        self.assertEqual(articles,[])

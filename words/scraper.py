@@ -32,6 +32,13 @@ class Scraper:
             article_id = self.db.articles.insert_one(last_article).inserted_id
         return article_id
 
+    def get_articles_from_db(self):
+        cursor = self.db.articles.find()
+        list_of_articles = []
+        for doc in cursor:
+            list_of_articles.append(doc)
+        return list_of_articles
+
     def _element_exists(self, article):
         articles = self.db.articles
         element = articles.find_one(article)
