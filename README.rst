@@ -2,6 +2,9 @@
  Words Project
 =========================
 
+.. image:: https://travis-ci.org/enriquesanchezb/practica_utad_2016.svg?branch=master
+    :target: https://travis-ci.org/enriquesanchezb/practica_utad_2016
+
 Synopsis
 ========
 
